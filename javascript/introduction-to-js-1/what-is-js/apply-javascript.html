@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-US">
+  <script>
+  // JavaScript をここに書きます
+    document.addEventListener("DOMContentLoaded", () => {
+  function createParagraph() {
+    const para = document.createElement("p");
+    para.textContent = "ボタンが押されました!";
+    document.body.appendChild(para);
+  }
+
+  const buttons = document.querySelectorAll("button");
+
+  for (const button of buttons) {
+    button.addEventListener("click", createParagraph);
+  }
+});
+</script>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
